@@ -76,6 +76,13 @@
 					</div>
 
 					
+					<div class="container-login100-form-btn m-t-17">
+						<a class="login100-form-btn" type="button" name="registar" href="registar.php" style="text-decoration: none; ">
+							Registar
+					</a>
+					</div>
+
+					
 
 				</form>
 
