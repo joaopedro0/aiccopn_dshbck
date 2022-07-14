@@ -87,7 +87,7 @@ $row=mysqli_fetch_array($result);
         <div class="main-menu-content">
           <br><br><br>
           <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
-            <li class="active"><a href="index.php"><i class="ft-grid"></i><span class="menu-title" data-i18n="">Dashboard</span></a>
+            <li class="active"><a href="index.php"><i class="ft-grid"></i><span class="menu-title" data-i18n="">Olá Bem-vindo!</span></a>
             </li>
             <li class=" nav-item"><a href="consultas.php"><i class="ft-calendar"></i><span class="menu-title" data-i18n="">Consultas</span></a>
             </li>
@@ -107,7 +107,7 @@ $row=mysqli_fetch_array($result);
             <?php
             if($session_id === 'utilizador.dev'){
               ?>
-            <li class=" nav-item"><a href="teste.php"><i class="ft-package"></i><span class="menu-title" data-i18n="">Desenvolvedor</span></a>
+            <li class=" nav-item"><a href="teste.php"><i class="ft-package"></i><span class="menu-title" data-i18n="">Dev Tracker </span></a>
             </li>
             <li class=" nav-item"><a href="users.php"><i class="ft-user-check"></i><span class="menu-title" data-i18n="">Utilizadores</span></a>
             </li>
