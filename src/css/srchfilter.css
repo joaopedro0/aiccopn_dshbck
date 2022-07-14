@@ -1,0 +1,80 @@
+
+.search-container {
+  float:right;
+  padding-right: 2em;
+  position: static;
+}
+
+.btnrsp {
+  width: 400px;
+  padding-left: 2.5em;
+  float:left;
+  padding-top: 0.3em;
+}
+
+@media only screen and (max-width: 970px) {
+
+    .search-container{
+      padding-top: 1.5em;
+      float: left;
+      padding-left: 1.5em;
+
+    }
+
+
+
+}
+
+
+@media only screen and (max-width: 330px) {
+
+    .btnrsp{
+      width: 200px;
+      float: center;
+
+    }
+
+}
+
+
+#myInput {
+ /* Add a search icon to input */
+  background-image: url("../images/search.svg");
+  background-position: 8px 8px; /* Position the search icon */
+  background-size: 17px;
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 250px; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 5px 20px 5px 35px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-bottom: 1.5em; /* Add some space below the input */
+  border-radius: 15px;
+}
+
+
+#myInput:focus {
+  outline: none;
+}
+
+
+
+
+
+#myTable tr.header, #myTable tr:hover {
+  /* Add a grey background color to the table header and on hover */
+  background-color: #f1f1f1;
+
+
+
+
+}
+
+
+#myTable tr.header, #myTable tr:active {
+  /* Add a grey background color to the table header and on hover */
+  background-color: #9ef2ff;
+
+
+
+
+}

@@ -1,0 +1,10 @@
+@media only screen and (max-width: 698px) {
+  .rsz_hide {
+    display: none;
+
+  }
+
+  .btn-sm{
+   padding: .5rem .9rem;
+  }
+}
