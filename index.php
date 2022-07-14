@@ -51,7 +51,7 @@ $row=mysqli_fetch_array($result);
               <ul class="nav navbar-nav mr-auto">
                 <li class="nav-item d-block d-md-none"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu"></i></a></li>
                 <li class="nav-item d-none d-md-block"><a class="nav-link nav-link-expand" onclick="openFullscreen();" href="#"><i class="ficon ft-maximize"></i></a></li>
-                <li class="nav-item d-none d-md-block" style="padding-top: 0.4em;"><a class="nav-link">Medicina</a></li>
+                <li class="nav-item d-none d-md-block" style="padding-top: 0.4em;"><a class="nav-link">Medicina no Trabalho</a></li>
               </ul>
 
               <ul class="nav navbar-nav float-right">
