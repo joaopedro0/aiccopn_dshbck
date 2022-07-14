@@ -107,7 +107,7 @@ $row=mysqli_fetch_array($result);
             <?php
             if($session_id === 'utilizador.dev'){
               ?>
-            <li class=" nav-item"><a href="teste.php"><i class="ft-package"></i><span class="menu-title" data-i18n="">Desenvolvedor </span></a>
+            <li class=" nav-item"><a href="teste.php"><i class="ft-package"></i><span class="menu-title" data-i18n="">Dev Tracker </span></a>
             </li>
             <li class=" nav-item"><a href="users.php"><i class="ft-user-check"></i><span class="menu-title" data-i18n="">Utilizadores</span></a>
             </li>
