@@ -87,7 +87,7 @@ $row=mysqli_fetch_array($result);
         <div class="main-menu-content">
           <br><br><br>
           <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
-            <li class="active"><a href="index.php"><i class="ft-grid"></i><span class="menu-title" data-i18n="">Dashboard</span></a>
+            <li class="active"><a href="index.php"><i class="ft-grid"></i><span class="menu-title" data-i18n="">Olá Bem-vindo!</span></a>
             </li>
             <li class=" nav-item"><a href="consultas.php"><i class="ft-calendar"></i><span class="menu-title" data-i18n="">Consultas</span></a>
             </li>
