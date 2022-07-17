@@ -268,7 +268,7 @@ $row=mysqli_fetch_array($result);
           <div class="card  ecom-card-1 bg-white">
               <div class="card-content ecom-card2 height-200"><!-- END PAGE LEVEL JS-->
 
-                  <h5 class="position-absolute p-1" style="color: #2eb82e;">Empresas</h5>
+                  <h5 class="position-absolute p-1" style="color: #2eb82e;">Clínicas</h5>
                   <div>
                       <i class="ft-briefcase font-large-1 float-right p-1" style="color: #2eb82e;"></i>
                   </div>
@@ -276,29 +276,37 @@ $row=mysqli_fetch_array($result);
                     <!-- CONTENT -->
                     <br>
                   <div class="float-left col-md-12" style="font-size: 50px; color:black; opacity:0.75;">
+
                     <?php
-                    $con = mysqli_connect("localhost","root","","consulta");
-                  
-                    if (mysqli_connect_errno())
+                    /* Código original do João */
+                          // $con = mysqli_connect("localhost","root","","consulta");
+                          //  if (mysqli_connect_errno())
+                          //    {
+                          //    echo "Falha ao conectar ao servidor: " . mysqli_connect_error();
+                          //    }
+                          //  if ($result = mysqli_query($con, "SELECT CodEmpresa FROM empresas")) {
+                          //    $row_cnt = mysqli_num_rows($result);
+                          //    echo "&nbsp;".$row_cnt;
+                          //    mysqli_free_result($result);
+                          //  }
+                          //  mysqli_close($con);
 
-                      {
-                      echo "Falha ao conectar ao servidor: " . mysqli_connect_error();
-                      }
+                   /* Código diferente proposto por Ana Paula Almeida */
+                      $ligacao = mysqli_connect("localhost","root","","consulta");
+                      if ($ligacao->connect_error) {
+                          die(mysqli_error($ligacao)); //se falhar a ligação
+                        }
 
-                      if ($result = mysqli_query($con, "SELECT CodEmpresa FROM empresas")) {
-
-                      
-                        $row_cnt = mysqli_num_rows($result);
-
-                        echo "&nbsp;".$row_cnt;
-
-                     
-                        mysqli_free_result($result);
-                      }
-
-                      
-                      mysqli_close($con);
+                        $sql = "SELECT * FROM clinicas";
+                        $resultado = mysqli_query($ligacao, $sql) or die(mysql_error($ligacao));
+                        $numreg = 0; 
+                          while ($linha = mysqli_fetch_assoc($resultado)) {
+                            $numreg = $numreg + 1;
+                          }
+                        echo "&nbsp;".$numreg;
+                        mysqli_close($ligacao);
                       ?>
+                    
                       <hr style="border-color: #2eb82e; opacity: 0.3">
                   </div>
                   </div>
