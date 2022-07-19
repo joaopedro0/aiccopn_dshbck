@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 01-Jul-2019 às 18:04
--- Versão do servidor: 10.1.40-MariaDB
--- versão do PHP: 7.3.5
+-- Tempo de geração: 19-Jul-2022 às 20:56
+-- Versão do servidor: 10.4.24-MariaDB
+-- versão do PHP: 8.0.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,10 +18,8 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `consulta`
+-- Banco de dados: `consulta`
 --
-CREATE DATABASE IF NOT EXISTS `consulta` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `consulta`;
 
 -- --------------------------------------------------------
 
@@ -279,7 +276,7 @@ CREATE TABLE `consultas` (
 --
 
 INSERT INTO `consultas` (`CodConsulta`, `CodCliente`, `CodClinica`, `DataExame`, `Preco`, `Hora`, `TipoExame`) VALUES
-(1, 32, 35, '2019-06-13', 142, '15:00:00', '2'),
+(1, 32, 35, '2019-06-13', 145, '15:00:00', '2'),
 (5, 100, 5, '0000-00-00', 9414, '14:33:30', '2'),
 (10, 96, 8, '0000-00-00', 10852, '14:49:11', '3'),
 (13, 56, 19, '0000-00-00', 78980, '18:13:33', '2'),
@@ -468,37 +465,38 @@ INSERT INTO `empresas` (`CodEmpresa`, `Nome`, `Nif`, `Morada`, `Localidade`) VAL
 CREATE TABLE `utilizadores` (
   `ID` int(5) NOT NULL,
   `username` varchar(30) NOT NULL,
-  `password` varchar(30) NOT NULL
+  `password` varchar(30) NOT NULL,
+  `email` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `utilizadores`
 --
 
-INSERT INTO `utilizadores` (`ID`, `username`, `password`) VALUES
-(1, 'utilizador.dev', 'dev@aiccopn'),
-(2, 'utilizador', 'eu@aiccopn'),
-(3, 'teste', '123');
+INSERT INTO `utilizadores` (`ID`, `username`, `password`, `email`) VALUES
+(1, 'utilizador.dev', 'dev@aiccopn', 'dev@gmail.com'),
+(2, 'utilizador', 'eu@aiccopn', 'user@gmail.com'),
+(12, 'joaopedro0', '12345', 'jonas@gmail.com');
 
 --
--- Indexes for dumped tables
+-- Índices para tabelas despejadas
 --
 
 --
--- Indexes for table `clientes`
+-- Índices para tabela `clientes`
 --
 ALTER TABLE `clientes`
   ADD PRIMARY KEY (`CodCliente`),
   ADD KEY `fx_cod_empe` (`CodEmpresa`);
 
 --
--- Indexes for table `clinicas`
+-- Índices para tabela `clinicas`
 --
 ALTER TABLE `clinicas`
   ADD PRIMARY KEY (`CodClinica`);
 
 --
--- Indexes for table `consultas`
+-- Índices para tabela `consultas`
 --
 ALTER TABLE `consultas`
   ADD PRIMARY KEY (`CodConsulta`),
@@ -506,13 +504,29 @@ ALTER TABLE `consultas`
   ADD KEY `fx_cod_client` (`CodCliente`);
 
 --
--- Indexes for table `empresas`
+-- Índices para tabela `empresas`
 --
 ALTER TABLE `empresas`
   ADD PRIMARY KEY (`CodEmpresa`);
 
 --
--- Constraints for dumped tables
+-- Índices para tabela `utilizadores`
+--
+ALTER TABLE `utilizadores`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- AUTO_INCREMENT de tabelas despejadas
+--
+
+--
+-- AUTO_INCREMENT de tabela `utilizadores`
+--
+ALTER TABLE `utilizadores`
+  MODIFY `ID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- Restrições para despejos de tabelas
 --
 
 --
